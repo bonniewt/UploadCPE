@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+import pyautogui
 import csv
 
 # open the form in chrome
@@ -10,13 +11,14 @@ time.sleep(5)
 
 # read in csv
 
+index_number = 5
+role = "Student"
+credit = 'Technical'
+date = '09/09/2022'
 provider_name = 'WSCPA'
 course_name = 'Tax'
 cpe_hours = '1'
 na_comment = ' '
-
-# def fillForm(date, course, role, credit, hours, comments)
-
 
 # completion date - date
 
@@ -31,8 +33,51 @@ course_title = browser.find_element('xpath',
 course_title.send_keys(course_name)
 
 # role - drop down menu
+role_dropdown = browser.find_element('xpath',
+                                     '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/div[1]/div[1]/div[1]')
+role_dropdown.click()
+time.sleep(3)
+
+if role == "Student":
+    role_index = 1
+
+elif role == "Instructor/Developer":
+    role_index = 2
+
+elif role == "Published Authorship":
+    role_index = 3
+
+elif role == "ACB Board Service":
+    role_index = 4
+
+else:
+    role_index = 0
+
+for _ in range(role_index):
+    pyautogui.keyDown('down')
+    pyautogui.keyUp('down')
+
+pyautogui.keyDown('enter')
+pyautogui.keyUp('enter')
 
 # credit type - drop down menu
+credit_dropdown = browser.find_element('xpath', '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[5]/div/div/div[2]/div/div[1]/div[1]/div[1]')
+credit_dropdown.click()
+time.sleep(3)
+
+if credit == "Technical":
+    credit_index = 1
+elif credit == "Non-Technical":
+    credit_index = 2
+else:
+    credit_index = 0
+
+for _ in range (credit_index):
+    pyautogui.keyDown('down')
+    pyautogui.keyUp('down')
+
+pyautogui.keyDown('enter')
+pyautogui.keyUp('enter')
 
 # number of hours - fill in the blank
 num_hours = browser.find_element('xpath',
@@ -49,5 +94,5 @@ submit = browser.find_element('xpath', '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[
 submit.click()
 
 # close chromedriver
-browser.close()
-browser.quit()
+# browser.close()
+# browser.quit()
