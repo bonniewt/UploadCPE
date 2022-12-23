@@ -21,6 +21,8 @@ cpe_hours = '1'
 na_comment = ' '
 
 # completion date - date
+date_input = browser.find_element('xpath', '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/input')
+date_input.send_keys(date)
 
 # provider - fill in the blank
 provider = browser.find_element('xpath',
