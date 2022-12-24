@@ -33,16 +33,16 @@ Update Homebrew
 
 ```
 brew update
-
 ```
+
 Install Chromedriver
 
 ```
 brew install chromedriver --cask
-
 ```
 
 Check if your chromedriver is the compatible with the Chrome version
+
 ```
 chromedriver -v
 ```
@@ -55,11 +55,12 @@ find out where chromedriver is installed
 ```
 which chromedriver
 ```
+
 remove with rm location
 
 ```
 rm /usr/local/bin/chromedriver
-'''
+```
 
 ### Deployment
 
@@ -79,7 +80,6 @@ Form Filler:
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE
 * [Selenium](https://www.selenium.dev/) - Selenium Webdriver
 * [ChromeDriver] (https://chromedriver.chromium.org/downloads) - ChromeDriver
-
 
 
 Test Dataset Generator: 
