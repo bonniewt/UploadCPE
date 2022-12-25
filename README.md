@@ -1,11 +1,21 @@
 # UploadCPE
+![1](https://user-images.githubusercontent.com/70975465/209453644-04e682a8-e3a3-4563-89e4-96806cd77c5e.jpg)
+
+
 
 ### Project summary
 
 This is an Python script automation to replace labor-intensive process to manually submit for CPA license renewals in Washington state.
 It automates the extraction of key attributes (hours, date, education provider) from PDFs and fills out the online form.
+![3](https://user-images.githubusercontent.com/70975465/209453656-a03d33a6-a92d-4798-9af7-d4f52e3afbaf.jpg)
+
+
+
 With 10 clicks/text fields per form and average of 120 forms per renewal, resulting in potentially saving 13,000 hours and
 $2.6M in billable hours (2+ hours per renewal and 6500+ CPAs in Washington with average at $200 per hour rate).
+
+![2](https://user-images.githubusercontent.com/70975465/209453650-301a2243-fa48-4299-995d-dc91791d0797.jpg)
+
 
 ### Prerequisites
 
@@ -73,13 +83,16 @@ Step 3: To run the code.
 
 ## Additional information
 
-### Tools used
+### Tools used!
+
+[4](https://user-images.githubusercontent.com/70975465/209453661-097e3677-c9dc-4146-b095-2f4282cbcc23.jpg)
+
 
 Form Filler:
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE
 * [Selenium](https://www.selenium.dev/) - Selenium Webdriver
-* [ChromeDriver] (https://chromedriver.chromium.org/downloads) - ChromeDriver
+* [ChromeDriver](https://chromedriver.chromium.org/downloads) - ChromeDriver
 
 
 Test Dataset Generator: 
