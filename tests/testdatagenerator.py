@@ -24,8 +24,6 @@ while not int_entries:
     int_entries = entries.isnumeric()
 num_entries = int(entries)
 
-#TODO add check for numbers between 0 and 100
-
 # options
 provider = ("AICPA", "WSCPA", "IIA", "ISACA", "Becker", "EY", "PwC", "KPMG", "Deloitte")
 role = ("Student", "Instructor/Developer", "Published Authorship", "ACB Board Service")
