@@ -72,6 +72,20 @@ remove with rm location
 rm /usr/local/bin/chromedriver
 ```
 
+Step 5: Install packages
+
+```
+pip install pytesseract
+```
+
+```
+pip install pdf2 image
+```
+
+```
+pip install python-poppler
+```
+
 ### Deployment
 
 Step 1: Download the code from [UploadCPE](https://github.com/bonniewt/UploadCPE)
