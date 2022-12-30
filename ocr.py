@@ -7,7 +7,7 @@ from PIL import Image  # image submodule to work with pillow image
 import pytesseract as pt
 from pdf2image import convert_from_path  # convert pdf to jpeg
 
-test_img_path = ""
+test_img_path = "cpe.jpg"
 
 # convert pdf to jpeg
 pdfs = r"cpe.pdf"
