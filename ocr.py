@@ -28,12 +28,21 @@ fileBaseName, fileExtension = os.path.splitext(fileName)
 # create dictionary to store values
 Dict = {}
 
+
+def parse_date(string):
+    date_pattern = '^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19|20)\d\d$'
+    mo = re.match(date_pattern, string)
+    return mo
+
+
 for page_data in doc:
     txt = pytesseract.image_to_string(page_data).encode("utf-8")
 
+    # parse read in file by type
+
     # Completion Date
-
-
+    completion_date = parse_date(txt)
+    Dict['Completion'] = completion_date
 
     # Provider
 
@@ -46,12 +55,9 @@ for page_data in doc:
 
     # Number of Hours
 
-
-
     print(txt)
 
-
-# output in csv file
+# TODO output in csv file
 
 
 '''
