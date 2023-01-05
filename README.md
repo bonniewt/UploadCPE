@@ -22,8 +22,8 @@ $2.6M in billable hours (2+ hours per renewal and 6500+ CPAs in Washington with 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE
 * [Chrome](https://www.google.com/chrome/dr/download/?brand=JJTC&gclid=EAIaIQobChMI-rP-tc2R_AIVIB6tBh0KCAd2EAAYASAAEgL09_D_BwE&gclsrc=aw.ds) - Web Browser
 * [Selenium](https://www.selenium.dev/) - Selenium Webdriver
-* [Pytesseract] (https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
-* [pdf2image] (https://pypi.org/project/pdf2image/) - Converts PDFs to Python Imaging Library (PIL) Image Object
+* [Pytesseract](https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
+* [pdf2image](https://pypi.org/project/pdf2image/) - Converts PDFs to Python Imaging Library (PIL) Image Object
 
 ### Installation 
 
@@ -97,8 +97,8 @@ Step 2: Run FormFiller.py to take the CSV file and automatically fill the releva
 ### Tools used!
 
 PDF to CSV:
-* [Pytesseract] (https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
-* [pdf2image] (https://pypi.org/project/pdf2image/) - Converts PDFs to Python Imaging Library (PIL) Image Object
+* [Pytesseract](https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
+* [pdf2image](https://pypi.org/project/pdf2image/) - Converts PDFs to Python Imaging Library (PIL) Image Object
 
 
 Form Filler:
