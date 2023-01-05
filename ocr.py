@@ -29,33 +29,50 @@ fileBaseName, fileExtension = os.path.splitext(fileName)
 Dict = {}
 
 
-def parse_date(string):
-    date_pattern = '^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19|20)\d\d$'
-    mo = re.match(date_pattern, string)
-    return mo
+# def parse_date(string):
+#     date_pattern = '^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19|20)\d\d$'
+#     mo = re.match(date_pattern, string)
+#     return mo
+
+
+def substring_after(string, delimiter):
+    first_partitioned_str = string.partition(delimiter)
+    second_partitioned_str = first_partitioned_str[2] # string after the provided field name (delimiter)
+    third_partitioned_str = second_partitioned_str.partition('\\n')
+    fourth_partitioned_str = third_partitioned_str[0] # string before the newline char
+    return fourth_partitioned_str
 
 
 for page_data in doc:
-    txt = pytesseract.image_to_string(page_data).encode("utf-8")
+    pre_txt = pytesseract.image_to_string(page_data).encode("utf-8")
+    txt = str(pre_txt)
 
     # parse read in file by type
 
     # Completion Date
-    completion_date = parse_date(txt)
+    completion_date = substring_after(txt, "Event Date: ")
     Dict['Completion'] = completion_date
 
     # Provider
+    provider = substring_after(txt, "CPE Sponsor: ")
+    Dict["Provider"] = provider
 
     # Course Title
+    course = substring_after(txt, "Member Exclusive: ")
+    Dict["Course Title"] = course
 
     # Role - will always be a student for CPE certificates
     Dict['Role'] = 'Student'
 
-    # Credit Type
+    # Credit Type - will always be technical for CPE certificates
+    Dict['Credit Type'] = 'Technical'
 
     # Number of Hours
+    hours = substring_after(txt, "Total Credit Earned: ")
+    Dict['Number of Hours'] = hours
 
-    print(txt)
+    print(Dict)
+
 
 # TODO output in csv file
 
