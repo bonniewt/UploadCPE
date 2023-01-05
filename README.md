@@ -84,17 +84,19 @@ pip install pytesseract
 pip install pdf2image
 ```
 
-
 ### Deployment
 
 Step 1: Run ocr.py to parse the relevant fields (Completion Date, Provider, Course Title, Role, Credit Type, and Number of Hours) from Continue Professional Education (CPE) certificate from PDF format and output a CSV file. 
 
 Step 2: Run FormFiller.py to take the CSV file and automatically fill the relevant fields and submit the online CPA license renewal forms. 
 
+### Generate Test Data for FormFiller.py
+Run testdatagenerator.py and input the file name and the number of test entries to output CSV file. 
+
 
 ## Additional information
 
-### Tools used!
+### Tools used
 
 PDF to CSV:
 * [Pytesseract](https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
