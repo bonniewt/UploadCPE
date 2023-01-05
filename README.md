@@ -96,7 +96,7 @@ Step 2: Run FormFiller.py to take the CSV file and automatically fill the releva
 
 ### Tools used!
 
-[4](https://user-images.githubusercontent.com/70975465/209453661-097e3677-c9dc-4146-b095-2f4282cbcc23.jpg)
+(https://user-images.githubusercontent.com/70975465/209453661-097e3677-c9dc-4146-b095-2f4282cbcc23.jpg)
 
 PDF to CSV:
 * [Pytesseract] (https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
