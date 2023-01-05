@@ -22,6 +22,8 @@ $2.6M in billable hours (2+ hours per renewal and 6500+ CPAs in Washington with 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE
 * [Chrome](https://www.google.com/chrome/dr/download/?brand=JJTC&gclid=EAIaIQobChMI-rP-tc2R_AIVIB6tBh0KCAd2EAAYASAAEgL09_D_BwE&gclsrc=aw.ds) - Web Browser
 * [Selenium](https://www.selenium.dev/) - Selenium Webdriver
+* [Pytesseract] (https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
+* [pdf2image] (https://pypi.org/project/pdf2image/) - Converts PDFs to Python Imaging Library (PIL) Image Object
 
 ### Installation 
 
@@ -79,20 +81,15 @@ pip install pytesseract
 ```
 
 ```
-pip install pdf2 image
+pip install pdf2image
 ```
 
-```
-pip install python-poppler
-```
 
 ### Deployment
 
-Step 1: Download the code from [UploadCPE](https://github.com/bonniewt/UploadCPE)
+Step 1: Run ocr.py to parse the relevant fields (Completion Date, Provider, Course Title, Role, Credit Type, and Number of Hours) from Continue Professional Education (CPE) certificate from PDF format and output a CSV file. 
 
-Step 2: Load the code into your IDE
-
-Step 3: To run the code. 
+Step 2: Run FormFiller.py to take the CSV file and automatically fill the relevant fields and submit the online CPA license renewal forms. 
 
 
 ## Additional information
@@ -100,6 +97,10 @@ Step 3: To run the code.
 ### Tools used!
 
 [4](https://user-images.githubusercontent.com/70975465/209453661-097e3677-c9dc-4146-b095-2f4282cbcc23.jpg)
+
+PDF to CSV:
+* [Pytesseract] (https://pypi.org/project/pytesseract/) - Optical Character Recognition (OCR) tool for Python
+* [pdf2image] (https://pypi.org/project/pdf2image/) - Converts PDFs to Python Imaging Library (PIL) Image Object
 
 
 Form Filler:
