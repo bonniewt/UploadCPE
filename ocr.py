@@ -8,6 +8,7 @@ import pytesseract as pt
 from PIL import Image  # image submodule to work with pillow image
 from pdf2image import convert_from_path
 from pytesseract import Output
+import csv
 
 # https://nanonets.com/blog/ocr-with-tesseract/
 
@@ -51,7 +52,7 @@ for page_data in doc:
 
     # Completion Date
     completion_date = substring_after(txt, "Event Date: ")
-    Dict['Completion'] = completion_date
+    Dict['Completion Date'] = completion_date
 
     # Provider
     provider = substring_after(txt, "CPE Sponsor: ")
@@ -73,9 +74,13 @@ for page_data in doc:
 
     print(Dict)
 
+# output in csv file
+field_names = ['Completion Date', 'Provider', 'Course Title', 'Role', 'Credit Type', 'Number of Hours', 'Comments']
 
-# TODO output in csv file
-
+with open('test_file.csv', 'w') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames = field_names)
+    writer.writeheader()
+    writer.writerow(Dict)
 
 '''
 JPEG format input
